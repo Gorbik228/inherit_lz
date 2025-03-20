@@ -22,11 +22,14 @@ class Dog(Animal):
         self.breed = breed
         self.guard_status = guard_status
 
-    def __del__(self):
-        pass
-
     def make_sound(self):
         print("ГАУ ГАУ ГАУ")
 
     def info2(self):
+        if self.guard_status is True:
+            self.guard_status = False
+        else:
+            self.guard_status = True
         print(f"Порода:{self.breed}, Статус охраны дома: {self.guard_status}")
+    
+    
